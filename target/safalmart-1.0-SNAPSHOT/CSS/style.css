@@ -1,0 +1,80 @@
+.custom-bg{
+    background-color: #673ab7!important;
+}
+
+.list-group-item.active{
+    background-color: #673ab7!important;
+    border-color: #673ab7!important;
+}
+
+.discount-label{
+    font-size: 10px!important;
+    font-style: italic!important;
+}
+
+.actual-price{
+    text-decoration:line-through;
+    font-size: 15px;
+    font-family: monospace;
+}
+
+.product-card:hover{
+    background-color: #d4d4d4;
+    cursor: pointer;
+}
+
+.totalPriceStyle{
+    font-size: 30px;
+    font-family: Cooper Black;
+    color: crimson;
+}
+
+/*Toast message css start*/
+
+#toast{
+    min-width: 300px;
+    position: fixed;
+    bottom: 30px;
+    left:70%;
+    background-color: #333;
+    padding:18px;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    font-size: 18px;
+    visibility: hidden;
+    border-radius: 30px;
+    box-shadow: 0px 0px 100px #000;
+}
+
+#toast.display{
+    visibility: visible;
+    animation: fadeIn 0.5s, fadeOut 0.5s 2.5s;
+}
+
+@keyframes fadeIn{
+    from{
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to{
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut{
+    from{
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to{
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+/*Toast message css end*/
+
