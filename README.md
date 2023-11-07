@@ -1,1 +1,1 @@
-# This is the project of E-Commerce Website.
+# This is the project of E-Commerce Website which used for selling or Purchasing any items.
