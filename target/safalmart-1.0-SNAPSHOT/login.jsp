@@ -31,6 +31,7 @@
                                 <div class="form-group">
                                     <label for="password">Password</label>
                                     <input name="password" type="password" class="form-control" id="password" placeholder="Password">
+                                    <a href="forget.jsp" style="margin-left: 320px">forget password?</a>
                                 </div>
                                 <a href="register.jsp" class="text-center d-block mb-4 alert alert-warning">If not Registered click here !!!</a>
                                 <div class="container text-center">

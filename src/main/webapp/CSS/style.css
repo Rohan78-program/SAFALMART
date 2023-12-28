@@ -78,3 +78,44 @@
 
 /*Toast message css end*/
 
+#user{
+    border: 5px inset green;
+    background-color: #c99210;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    color: white;
+    font-size: 50px;
+}
+
+#user a{
+    margin-left: 10px;
+    margin-top: -10px;
+}
+
+#admin{
+    border: 10px groove #450312;
+    background-color: #c99210;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    color: white;
+    font-size: 50px;
+}
+
+#admin a{
+    margin-left: 6px;
+    margin-top: -18px;
+}
+
+#normal .card{
+    border: 4px solid goldenrod;
+}
+#normal .card:hover{
+    background-color: #d4d4d4;
+    cursor: pointer;
+}
+
+#search{
+    margin-left: 260px;
+}

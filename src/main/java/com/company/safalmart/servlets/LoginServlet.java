@@ -2,6 +2,7 @@
 package com.company.safalmart.servlets;
 
 import com.company.safalmart.dao.UserDao;
+import com.company.safalmart.dao.encryptDao;
 import com.company.safalmart.entities.User;
 import com.company.safalmart.helper.FactoryProvider;
 import java.io.IOException;
@@ -21,9 +22,10 @@ public class LoginServlet extends HttpServlet {
          
             String email=request.getParameter("email");
             String password=request.getParameter("password");
-            
+            encryptDao encrypt=new encryptDao(password);
+            String encPassword=encrypt.encryptionOfPassword(password);
             UserDao userDao = new UserDao(FactoryProvider.getFactory());
-            User user = userDao.getUserByEmailAndPassword(email, password);
+            User user = userDao.getUserByEmailAndPassword(email,encPassword);
             
             HttpSession httpSession = request.getSession();
             

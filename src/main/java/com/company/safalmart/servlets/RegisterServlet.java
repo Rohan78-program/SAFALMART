@@ -1,6 +1,7 @@
 
 package com.company.safalmart.servlets;
 
+import com.company.safalmart.dao.encryptDao;
 import com.company.safalmart.entities.User;
 import com.company.safalmart.helper.FactoryProvider;
 import java.io.IOException;
@@ -28,13 +29,16 @@ public class RegisterServlet extends HttpServlet {
                 String userAddress=request.getParameter("user_address");
                 String userType=request.getParameter("user_type");
                 
-                User user=new User(userName, userEmail, userPassword, userPhone,userAddress,userType);
+                encryptDao ed=new encryptDao(userPassword);
+                
+                String safePass=ed.encryptionOfPassword(userPassword);
+                
+                User user=new User(userName, userEmail, safePass, userPhone,userAddress,userType);
                 
                 Session hibernateSession = FactoryProvider.getFactory().openSession();
                 Transaction tx = hibernateSession.beginTransaction();
                 
                 int userId=(int) hibernateSession.save(user);
-                
                 tx.commit();
                 hibernateSession.close();
                 

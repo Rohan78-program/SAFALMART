@@ -2,6 +2,7 @@ com\company\safalmart\entities\Product.class
 com\company\safalmart\servlets\LoginServlet.class
 com\company\safalmart\entities\User.class
 com\company\safalmart\dao\CategoryDao.class
+com\company\safalmart\dao\encryptDao.class
 com\company\safalmart\servlets\ProductOperationServlet.class
 com\company\safalmart\entities\Category.class
 com\company\safalmart\helper\FactoryProvider.class

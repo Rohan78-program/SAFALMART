@@ -16,6 +16,10 @@
         <servlet-name>ProductOperationServlet</servlet-name>
         <servlet-class>com.company.safalmart.servlets.ProductOperationServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ForgotServlet</servlet-name>
+        <servlet-class>com.company.safalmart.servlets.ForgotServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>ProductOperationServlet</servlet-name>
         <url-pattern>/ProductOperationServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ForgotServlet</servlet-name>
+        <url-pattern>/ForgotServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

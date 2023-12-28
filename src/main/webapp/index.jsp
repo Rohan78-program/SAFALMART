@@ -16,10 +16,8 @@
     </head>
     <body>
         <%@include file="Components/navbar.jsp" %>
-
-        <div class="row mt-3 mx-2">
-
-            <%                
+        
+        <%                
                 String cat = request.getParameter("category");
                 ProductDao dao = new ProductDao(FactoryProvider.getFactory());
                 List<Product> list = null;
@@ -31,9 +29,8 @@
                 }
                 CategoryDao cdao = new CategoryDao(FactoryProvider.getFactory());
                 List<Category> clist = cdao.getCategories();
-
-            %>
-
+        %>
+        <div class="row mt-3 mx-2">
 
             <!-- show categories -->
             <div class="col-md-2">
@@ -73,7 +70,7 @@
 
                                 <div class="card-body">
 
-                                    <div class="container text-center">
+                                    <div class="container text-center" title="<%= product.getpName()%>">
 
                                         <img class="card-img-top m-2" src="Img/Product/<%= product.getpPic()%>" alt="<%= product.getpPic()%>" style="max-height: 170px; max-width: 100%; width: auto;">
 
